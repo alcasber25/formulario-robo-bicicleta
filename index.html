@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <title>Ejercicio de formulario - Registro robo de bicicleta</title>
+</head>
+
+<body>
+<header>
+    <h1>Registre su bicicleta robada</h1>
+    <p>Complete todos los datos para ayudarle a recuperar su bicicleta.</p>
+</header>
+
+ <form 
+        action="/ruta/del/script" 
+        method="post" 
+        enctype="multipart/form-data" 
+        target="_blank" 
+        autocomplete="on" 
+        novalidate 
+        name="formularioDeRegistro" 
+        accept-charset="UTF-8" 
+        onsubmit="return validarFormulario()" 
+        rel="noopener noreferrer">
+
+<fieldset>
+    <legend>Información sobre el robo</legend>
+<label for="fecha">Día:</label>
+<input type="date" id="fecha" name="fecha"><br><br>
+
+<label for="hora">Hora aproximada</label>
+<input type="time" id="hora" name="hora"><br><br>
+
+</fieldset>
+
+<fieldset>
+ <legend>Información sobre la bicicleta</legend>
+
+<label for="color">Color de la bicicleta:</label>
+<input type="color" id="color" name="color"><br><br>
+
+<label for="Precio">Rango de precio:</label>
+<input type="range" id="precio" name="precio" min="0" max="1000"><br><br>
+
+<label for="tipodebicicleta">Tipo de bicicleta:</label>
+<select id="bicicleta" name="bicicleta">
+      <option value="">-- Selecciona el tipo de bicicleta --</option>
+    <option value="ur">Urbana</option>
+    <option value="bc">Bicicleta Clásica</option>
+    <option value="bp">Bicicleta Plegable</option>
+    <option value="be">Bicicleta Eléctrica</option>
+    <option value="bm">Bicicleta Commuter</option>
+    <option value="mo">Montaña</option>
+    <option value="bs">Bicicletas de tipo Sport</option>
+    <option value="bt">Bicicletas de tipo Trail o Hard Tail</option>
+    <option value="bx">Bicicletas para XC o Cross Country</option>
+    <option value="ca">Carreras</option>
+    <option value="bg">Bicicletas Gran Fondo</option>
+    <option value="br">Bicicletas Racing</option>
+    <option value="ba">Bicicletas Aero</option>
+</select><br><br>
+
+<label for="accesorios">Accesorio:</label>
+<select id="accesorios" name="accesorios">
+      <option value="">-- Selecciona algún accesorio --</option>
+    <option value="ru">Ruedines</option>
+    <option value="hi">Hinchadores</option>
+    <option value="ro">Rodillos</option>
+    <option value="bo">Bomba de aire</option>
+    <option value="al">Alforja</option>
+    <option value="si">Silla portabebés</option>
+</select><br><br>
+
+<label for="marca">¿Qué marca era?</label>
+<select id="marca" name="marca">
+  <option value="">-- Selecciona una marca --</option>
+  <option value="specialized">Specialized</option>
+  <option value="trek">Trek</option>
+  <option value="merida">Merida</option>
+  <option value="scott">Scott</option>
+  <option value="giant">Giant</option>
+  <option value="cube">Cube</option>
+  <option value="lapierre">Lapierre</option>
+  <option value="orbea">Orbea</option>
+  <option value="cannondale">Cannondale</option>
+  <option value="bmc">BMC</option>
+  <option value="canyon">Canyon</option>
+  <option value="look">Look</option>
+  <option value="protek">Protek</option>
+  <option value="megamo">Megamo</option>
+  <option value="pinarello">Pinarello</option>
+  <option value="bianchi">Bianchi</option>
+  <option value="bh">BH</option>
+  <option value="factor">Factor</option>
+  <option value="ghost">Ghost</option>
+  <option value="cervelo">Cervélo</option>
+  <option value="argon">Argon</option>
+</select><br><br>
+
+</fieldset><br>
+
+<input type="submit" value="Enviar">
+
+<input type="reset" value="Reiniciar">
+
+ </form>
+</body>
